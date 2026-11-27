@@ -34,6 +34,37 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    /* Courses & Syllabus Hover Dropdown */
+#navmenu .dropdown ul {
+  display: none;
+  position: static;
+  margin-left: 25px;
+  padding-left: 10px;
+}
+
+#navmenu .dropdown:hover > ul {
+  display: block;
+}
+
+#navmenu .dropdown > a {
+  cursor: pointer;
+}
+
+#navmenu .dropdown > a .bi-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+#navmenu .dropdown:hover > a .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+#navmenu .dropdown ul li a {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+  </style>
 </head>
 
 <body class="index-page">
