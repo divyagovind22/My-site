@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction to Data Analysis | DATAFLOW</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<style>
+:root{--orange:#fa812f;--yellow:#fab12f;--cream:#fef3e2;--navy:#26384a;--blue:#3498db}
+*{scroll-behavior:smooth}body{background:var(--cream);font-family:Segoe UI,Tahoma,sans-serif;color:#243447}
+.navbar{background:var(--navy)}.navbar-brand{font-weight:800;letter-spacing:1px}.hero{background:linear-gradient(135deg,var(--orange),var(--yellow));padding:5rem 0;color:white}
+.hero h1{font-weight:800;line-height:1.15}.hero p{font-size:1.15rem;max-width:720px}.btn-blue{background:var(--blue);color:white;border:0}.btn-blue:hover{background:#2475ae;color:white}
+section{padding:4rem 0}section:nth-of-type(even){background:#fff;border-radius:18px}.section-label{color:var(--orange);font-weight:800;letter-spacing:1.5px;font-size:.85rem}
+h2{font-weight:750;color:var(--navy)}.card{border:0;border-radius:16px;box-shadow:0 8px 24px #26384a12;height:100%}.card-body{padding:1.5rem}.diagram{background:#f5f8fb;border-radius:16px;padding:1.25rem;overflow:auto}.step{background:white;border:2px solid #f0b36b;border-radius:14px;padding:1rem;text-align:center;min-width:130px;flex:1}.arrow{font-size:1.5rem;color:var(--orange);align-self:center}.table thead{background:var(--navy);color:white}.tool-icon{font-size:2rem;color:var(--orange)}.footer{background:var(--navy);color:white;padding:2rem}.insight{background:#fff5e8;border-left:5px solid var(--orange);padding:1rem;border-radius:8px}.fab{position:fixed;right:22px;bottom:22px;border-radius:50%;width:50px;height:50px;background:var(--blue);color:white;display:grid;place-items:center;text-decoration:none;box-shadow:0 5px 15px #0002}
+@media(max-width:767px){.hero{padding:3rem 0}section{padding:2.5rem 0}.process{flex-direction:column}.arrow{transform:rotate(90deg)}}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top"><div class="container"><a class="navbar-brand" href="#home"><i class="fa-solid fa-chart-line me-2"></i>DATAFLOW</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="#about">Introduction</a></li><li class="nav-item"><a class="nav-link" href="#process">Process</a></li><li class="nav-item"><a class="nav-link" href="#example">Example</a></li><li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li><li class="nav-item"><a class="nav-link" href="#careers">Applications</a></li><li class="nav-item"><a class="nav-link" href="#path">Learning Path</a></li><li class="nav-item"><a class="nav-link" href="#student-notes">Student Notes</a></li><li class="nav-item"><a class="nav-link" href="#student-projects">Student Projects</a></li></ul></div></div></nav>
+<header class="hero" id="home"><div class="container"><div class="row align-items-center g-4"><div class="col-lg-7"><span class="badge text-dark bg-white mb-3">BEGINNER-FRIENDLY LESSON</span><h1 class="display-4">Introduction to<br>Data Analysis</h1><p>Learn how information can help us understand problems, discover patterns and make better decisions—one step at a time.</p><a href="#about" class="btn btn-blue btn-lg me-2">Start Learning <i class="fa-solid fa-arrow-down ms-2"></i></a><a href="#example" class="btn btn-outline-light btn-lg">See Example</a><p class="mt-3 small"><i class="fa-solid fa-circle-check me-2"></i>No programming experience required to begin.</p></div><div class="col-lg-5"><div class="diagram bg-white"><svg viewBox="0 0 440 260" width="100%" role="img" aria-label="Data transformed into insights"><rect x="15" y="65" width="110" height="130" rx="14" fill="#fef3e2" stroke="#fa812f" stroke-width="2"/><text x="70" y="105" text-anchor="middle" font-size="17" font-weight="bold" fill="#26384a">RAW DATA</text><g fill="#fa812f"><rect x="35" y="120" width="18" height="18"/><rect x="59" y="120" width="18" height="18"/><rect x="83" y="120" width="18" height="18"/><rect x="35" y="145" width="18" height="18"/><rect x="59" y="145" width="18" height="18"/><rect x="83" y="145" width="18" height="18"/></g><text x="70" y="180" text-anchor="middle" font-size="12" fill="#26384a">Numbers &amp; facts</text><path d="M135 130 H175" stroke="#fa812f" stroke-width="5"/><path d="M165 118 L178 130 L165 142" fill="none" stroke="#fa812f" stroke-width="5"/><rect x="185" y="65" width="110" height="130" rx="14" fill="#e8f4fb" stroke="#3498db" stroke-width="2"/><text x="240" y="105" text-anchor="middle" font-size="17" font-weight="bold" fill="#26384a">ANALYSIS</text><g fill="#3498db"><rect x="205" y="145" width="15" height="30"/><rect x="227" y="125" width="15" height="50"/><rect x="249" y="112" width="15" height="63"/><rect x="271" y="135" width="15" height="40"/></g><text x="240" y="185" text-anchor="middle" font-size="12" fill="#26384a">Compare &amp; explore</text><path d="M305 130 H345" stroke="#fa812f" stroke-width="5"/><path d="M335 118 L348 130 L335 142" fill="none" stroke="#fa812f" stroke-width="5"/><rect x="355" y="65" width="75" height="130" rx="14" fill="#e8f6ec" stroke="#38a169" stroke-width="2"/><text x="392" y="105" text-anchor="middle" font-size="14" font-weight="bold" fill="#26384a">INSIGHT</text><path d="M392 115 q-18 0-18 18 q0 10 8 16 l2 9 h16 l2-9 q8-6 8-16 q0-18-18-18" fill="#fab12f"/><text x="392" y="185" text-anchor="middle" font-size="12" fill="#26384a">Better decision</text></svg></div></div></div></div></header>
+<main class="container">
+<section id="about"><div class="container"><div class="section-label">01 / THE BASICS</div><h2>What is Data Analysis?</h2><p class="lead">Data analysis is the process of examining information to find useful answers, patterns and insights.</p><div class="row g-4 align-items-center"><div class="col-lg-6"><p><b>Data</b> is information—like marks, prices, attendance or sales. <b>Analysis</b> means studying that information carefully.</p><p>We organize and compare data to understand what is happening and help decide what to do next.</p><div class="insight"><b>Everyday example:</b> You compare phone prices, battery life and reviews before choosing a phone. You're using information to make a decision!</div></div><div class="col-lg-6"><div class="diagram"><svg viewBox="0 0 400 230" width="100%" aria-label="Data analysis concept diagram"><circle cx="200" cy="110" r="65" fill="#fff" stroke="#fa812f" stroke-width="3"/><text x="200" y="100" text-anchor="middle" font-size="20" font-weight="bold" fill="#26384a">DATA</text><text x="200" y="125" text-anchor="middle" font-size="15" fill="#26384a">+ QUESTIONS</text><g><rect x="15" y="25" width="115" height="55" rx="12" fill="#e8f4fb"/><text x="72" y="48" text-anchor="middle" fill="#26384a" font-size="14">Collect</text><text x="72" y="65" text-anchor="middle" fill="#26384a" font-size="12">Information</text><rect x="270" y="25" width="115" height="55" rx="12" fill="#fef3e2"/><text x="327" y="48" text-anchor="middle" fill="#26384a" font-size="14">Discover</text><text x="327" y="65" text-anchor="middle" fill="#26384a" font-size="12">Patterns</text><rect x="15" y="150" width="115" height="55" rx="12" fill="#e8f6ec"/><text x="72" y="173" text-anchor="middle" fill="#26384a" font-size="14">Understand</text><text x="72" y="190" text-anchor="middle" fill="#26384a" font-size="12">Results</text><rect x="270" y="150" width="115" height="55" rx="12" fill="#f5eafb"/><text x="327" y="173" text-anchor="middle" fill="#26384a" font-size="14">Decide</text><text x="327" y="190" text-anchor="middle" fill="#26384a" font-size="12">What to do</text><path d="M130 70 L155 85 M270 70 L245 85 M130 155 L155 135 M270 155 L245 135" stroke="#fa812f" stroke-width="3"/></g></svg></div></div></div></div></section>
+<section id="process"><div class="container"><div class="section-label">02 / THE PROCESS</div><h2>How Does Data Analysis Work?</h2><p>Analysts follow a series of steps to turn raw information into useful findings.</p><div class="diagram"><div class="d-flex process gap-3 align-items-stretch"><div class="step"><i class="fa-solid fa-download tool-icon"></i><h5 class="mt-2">1. Collect</h5><p class="small mb-0">Gather information</p></div><div class="arrow">→</div><div class="step"><i class="fa-solid fa-broom tool-icon"></i><h5 class="mt-2">2. Clean</h5><p class="small mb-0">Fix errors &amp; missing data</p></div><div class="arrow">→</div><div class="step"><i class="fa-solid fa-magnifying-glass-chart tool-icon"></i><h5 class="mt-2">3. Analyze</h5><p class="small mb-0">Compare &amp; find patterns</p></div><div class="arrow">→</div><div class="step"><i class="fa-solid fa-chart-column tool-icon"></i><h5 class="mt-2">4. Visualize</h5><p class="small mb-0">Create charts</p></div><div class="arrow">→</div><div class="step"><i class="fa-solid fa-lightbulb tool-icon"></i><h5 class="mt-2">5. Decide</h5><p class="small mb-0">Share useful insights</p></div></div></div><p class="mt-3"><b>Goal:</b> Not just to calculate numbers—but to understand what those numbers tell us.</p></div></section>
+<section id="example"><div class="container"><div class="section-label">03 / A SIMPLE EXAMPLE</div><h2>Analyze a Stationery Shop's Sales</h2><p>Let's imagine a shop owner wants to know which products are selling well.</p><div class="table-responsive"><table class="table table-bordered table-striped align-middle"><thead><tr><th>Product</th><th>Units Sold</th><th>Price</th><th>Sales</th></tr></thead><tbody><tr><td>Notebook</td><td>20</td><td>₹50</td><td>₹1,000</td></tr><tr><td>Pen</td><td>35</td><td>₹20</td><td>₹700</td></tr><tr><td>School Bag</td><td>5</td><td>₹500</td><td>₹2,500</td></tr><tr><td>Pencil</td><td>40</td><td>₹10</td><td>₹400</td></tr></tbody></table></div><div class="row g-4 mt-1"><div class="col-lg-7"><div class="card"><div class="card-body"><h5>Sales by product (₹)</h5><svg viewBox="0 0 520 300" width="100%" aria-label="Bar chart comparing product sales"><line x1="70" y1="240" x2="480" y2="240" stroke="#526476" stroke-width="2"/><line x1="70" y1="40" x2="70" y2="240" stroke="#526476" stroke-width="2"/><g fill="#fa812f"><rect x="105" y="160" width="65" height="80" rx="5"/><rect x="205" y="184" width="65" height="56" rx="5"/><rect x="305" y="40" width="65" height="200" rx="5"/><rect x="405" y="208" width="65" height="32" rx="5"/></g><g font-size="14" fill="#26384a" text-anchor="middle"><text x="137" y="150">1000</text><text x="237" y="174">700</text><text x="337" y="30">2500</text><text x="437" y="198">400</text><text x="137" y="265">Notebook</text><text x="237" y="265">Pen</text><text x="337" y="265">Bag</text><text x="437" y="265">Pencil</text></g></svg></div></div></div><div class="col-lg-5"><div class="card"><div class="card-body"><h5>What did we find?</h5><ul><li><b>Most units sold:</b> Pencil (40)</li><li><b>Highest sales amount:</b> School Bag (₹2,500)</li><li><b>Total sales:</b> ₹4,600</li></ul><div class="insight"><b>Insight:</b> Pencils sold most by quantity, but school bags brought in the most sales revenue.</div><p class="small mt-3 mb-0">Sales revenue is not the same as profit. Costs must also be considered.</p></div></div></div></div></div></section>
+<section id="tools"><div class="container"><div class="section-label">04 / TOOLS</div><h2>Tools Used by Data Analysts</h2><p>Different tools help with different parts of the analysis journey.</p><div class="row g-3"><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-file-excel tool-icon"></i><h5 class="mt-3">Excel</h5><p class="mb-0">Organize tables, use formulas, sort, filter and create charts.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-brands fa-python tool-icon"></i><h5 class="mt-3">Python</h5><p class="mb-0">Automate analysis and work with larger datasets.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-table tool-icon"></i><h5 class="mt-3">Pandas</h5><p class="mb-0">Clean, filter and organize data in tables.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-calculator tool-icon"></i><h5 class="mt-3">NumPy</h5><p class="mb-0">Perform calculations with numbers and arrays.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-chart-column tool-icon"></i><h5 class="mt-3">Matplotlib</h5><p class="mb-0">Create charts and graphs to show patterns.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-database tool-icon"></i><h5 class="mt-3">SQL / MySQL</h5><p class="mb-0">Store, retrieve and summarize data in databases.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-chart-pie tool-icon"></i><h5 class="mt-3">Power BI</h5><p class="mb-0">Create interactive reports and dashboards.</p></div></div></div></div><div class="diagram mt-4"><h5 class="text-center">Where tools fit in the workflow</h5><div class="d-flex process flex-wrap justify-content-center gap-2"><div class="step"><b>Excel / SQL</b><br><small>Collect &amp; retrieve</small></div><div class="arrow">→</div><div class="step"><b>Python / Pandas</b><br><small>Clean &amp; analyze</small></div><div class="arrow">→</div><div class="step"><b>Matplotlib / Power BI</b><br><small>Visualize &amp; report</small></div></div></div></div></section>
+<section id="careers"><div class="container"><div class="section-label">05 / WHERE DATA IS USED</div><h2>Data Analysis in Everyday Industries</h2><p>Organizations use data to understand performance and make informed decisions.</p><div class="row g-3"><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-hospital tool-icon"></i><h5 class="mt-2">Healthcare</h5><p class="mb-0">Appointments, patient wait times and hospital operations.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-cart-shopping tool-icon"></i><h5 class="mt-2">Retail</h5><p class="mb-0">Product demand, sales and customer preferences.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-building-columns tool-icon"></i><h5 class="mt-2">Banking</h5><p class="mb-0">Transactions, spending and risk patterns.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-school tool-icon"></i><h5 class="mt-2">Education</h5><p class="mb-0">Marks, attendance and learning progress.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-bullhorn tool-icon"></i><h5 class="mt-2">Marketing</h5><p class="mb-0">Campaign results, clicks and audience engagement.</p></div></div></div><div class="col-md-6 col-lg-4"><div class="card"><div class="card-body"><i class="fa-solid fa-truck tool-icon"></i><h5 class="mt-2">Logistics</h5><p class="mb-0">Delivery times, routes and costs.</p></div></div></div></div></div></section>
+<section id="path"><div class="container"><div class="section-label">06 / YOUR LEARNING PATH</div><h2>What Will You Learn?</h2><p>Learn gradually, practice regularly and build confidence.</p><div class="row g-3"><div class="col-md-6"><div class="card"><div class="card-body"><span class="badge bg-warning text-dark">Module 1</span><h5 class="mt-2">Data &amp; Excel Basics</h5><p class="mb-0">Tables, data types, formulas, sorting, filtering and PivotTables.</p></div></div></div><div class="col-md-6"><div class="card"><div class="card-body"><span class="badge bg-warning text-dark">Module 2</span><h5 class="mt-2">Python Fundamentals</h5><p class="mb-0">Variables, data types, conditions, loops and functions.</p></div></div></div><div class="col-md-6"><div class="card"><div class="card-body"><span class="badge bg-warning text-dark">Module 3</span><h5 class="mt-2">NumPy &amp; Pandas</h5><p class="mb-0">Arrays, DataFrames, data cleaning and filtering.</p></div></div></div><div class="col-md-6"><div class="card"><div class="card-body"><span class="badge bg-warning text-dark">Module 4</span><h5 class="mt-2">Charts &amp; Visualization</h5><p class="mb-0">Graphs, chart types and visual storytelling.</p></div></div></div><div class="col-md-6"><div class="card"><div class="card-body"><span class="badge bg-warning text-dark">Module 5</span><h5 class="mt-2">SQL &amp; MySQL</h5><p class="mb-0">Queries, filtering, grouping, calculations and joins.</p></div></div></div><div class="col-md-6"><div class="card"><div class="card-body"><span class="badge bg-warning text-dark">Module 6</span><h5 class="mt-2">Power BI &amp; Project</h5><p class="mb-0">Dashboards, reports and a practical data project.</p></div></div></div></div></div></section>
+
+<section id="student-notes"><div class="container">
+<div class="section-label">STUDENT NOTEBOOK / REVISION</div>
+<h2>Important Notes Every Data Analysis Student Should Write</h2>
+<p class="lead">Keep these basic concepts in your notebook. They are useful for revision, practice and interviews.</p>
+
+<div class="row g-3">
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-book tool-icon me-2"></i>1. Key Definitions</h5>
+<ul class="mb-0">
+<li><b>Data:</b> Raw facts, figures or information collected for a purpose.</li>
+<li><b>Data Analysis:</b> Examining data to answer questions, identify patterns and make better decisions.</li>
+<li><b>Dataset:</b> A collection of related data, often arranged in rows and columns.</li>
+<li><b>Data Analyst:</b> A person who studies data to help people or organizations make informed decisions.</li>
+<li><b>Insight:</b> A useful finding discovered through analysis.</li>
+<li><b>Dashboard:</b> A visual display of key information and measures.</li>
+<li><b>Report:</b> A structured presentation of findings and results.</li>
+</ul></div></div></div>
+
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-shapes tool-icon me-2"></i>2. Types of Data</h5>
+<p><b>Numerical data:</b> Values expressed as numbers.</p>
+<ul><li><b>Discrete:</b> Countable values (number of students, items sold).</li><li><b>Continuous:</b> Measured values (height, weight, temperature).</li></ul>
+<p><b>Categorical data:</b> Values describing categories or groups (city, product, department, status).</p>
+<div class="diagram"><div class="d-flex flex-wrap gap-2 justify-content-center"><div class="step"><b>Data</b><br>↙ &nbsp; ↘</div><div class="step"><b>Numerical</b><br>Discrete / Continuous</div><div class="step"><b>Categorical</b><br>Labels / Groups</div></div></div>
+</div></div></div>
+
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-table tool-icon me-2"></i>3. Understand a Dataset</h5>
+<ul class="mb-0">
+<li><b>Row:</b> A record or observation (e.g., one sale or one student).</li>
+<li><b>Column:</b> A field or variable (e.g., date, product, quantity, price).</li>
+<li><b>Cell:</b> The value where a row and column intersect.</li>
+<li><b>Header:</b> The column name describing the field.</li>
+<li><b>CSV:</b> A common text file format for tabular data.</li>
+</ul>
+<div class="diagram mt-3"><table class="table table-bordered mb-0 text-center"><thead><tr><th>Student</th><th>Subject</th><th>Mark</th></tr></thead><tbody><tr><td>Arun</td><td>Maths</td><td>85</td></tr><tr><td>Meera</td><td>Science</td><td>92</td></tr></tbody></table><small>Each horizontal record is a row; each field is a column.</small></div>
+</div></div></div>
+
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-list-check tool-icon me-2"></i>4. The Analysis Workflow</h5>
+<div class="diagram"><div class="d-flex flex-column gap-2"><div class="step">1. Ask a question / define the problem</div><div class="arrow">↓</div><div class="step">2. Collect data</div><div class="arrow">↓</div><div class="step">3. Clean and prepare data</div><div class="arrow">↓</div><div class="step">4. Explore and analyze data</div><div class="arrow">↓</div><div class="step">5. Visualize results</div><div class="arrow">↓</div><div class="step">6. Communicate insights and recommendations</div></div></div>
+<p class="small mt-3 mb-0">The steps may repeat as new questions or problems are discovered.</p>
+</div></div></div>
+
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-broom tool-icon me-2"></i>5. Data Cleaning</h5>
+<p>Data cleaning helps improve the quality and reliability of a dataset.</p>
+<ul class="mb-0">
+<li>Check missing or blank values.</li>
+<li>Remove or investigate duplicate records.</li>
+<li>Correct spelling and inconsistent categories.</li>
+<li>Check incorrect values and data types.</li>
+<li>Check date, currency and number formats.</li>
+<li>Investigate unusual values (outliers)—do not remove them automatically.</li>
+</ul></div></div></div>
+
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-calculator tool-icon me-2"></i>6. Common Calculations</h5>
+<ul>
+<li><b>Sum / Total:</b> Adds values together.</li>
+<li><b>Mean:</b> Sum of values ÷ number of values.</li>
+<li><b>Median:</b> Middle value after sorting.</li>
+<li><b>Mode:</b> Most frequently occurring value.</li>
+<li><b>Percentage:</b> (Part ÷ Total) × 100.</li>
+<li><b>Range:</b> Maximum value − Minimum value.</li>
+</ul>
+<div class="insight"><b>Remember:</b> The mean can be affected by extreme values. The median may better represent the centre of some datasets.</div>
+</div></div></div>
+
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-chart-column tool-icon me-2"></i>7. Choosing a Chart</h5>
+<ul class="mb-0">
+<li><b>Bar chart:</b> Compare categories.</li>
+<li><b>Line chart:</b> Show change over time.</li>
+<li><b>Pie chart:</b> Show simple parts of a whole (use sparingly).</li>
+<li><b>Histogram:</b> Show distribution of numerical values.</li>
+<li><b>Scatter plot:</b> Explore relationships between two numerical variables.</li>
+</ul></div></div></div>
+
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-chart-line tool-icon me-2"></i>8. Important Business Terms</h5>
+<ul class="mb-0">
+<li><b>Revenue:</b> Money earned from sales before deducting costs.</li>
+<li><b>Profit:</b> Revenue minus costs and expenses (as defined for the calculation).</li>
+<li><b>KPI:</b> Key Performance Indicator—a measure used to track a goal.</li>
+<li><b>Trend:</b> A general pattern of change over time.</li>
+<li><b>Correlation:</b> A relationship between variables; correlation alone does not prove causation.</li>
+<li><b>Outlier:</b> A value unusually far from others in a dataset.</li>
+</ul></div></div></div>
+
+<div class="col-md-6"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-shield-halved tool-icon me-2"></i>9. Responsible Data Use</h5>
+<ul class="mb-0">
+<li>Protect personal and confidential information.</li>
+<li>Use data only for an appropriate purpose.</li>
+<li>Check the source and reliability of data.</li>
+<li>Avoid misleading charts or conclusions.</li>
+<li>Explain limitations and uncertainty.</li>
+<li>Do not confuse correlation with causation.</li>
+</ul></div></div></div>
+
+<div class="col-12"><div class="card"><div class="card-body">
+<h5><i class="fa-solid fa-pencil tool-icon me-2"></i>10. Questions to Ask When You Receive a Dataset</h5>
+<div class="row"><div class="col-md-6"><ol>
+<li>What does each row represent?</li><li>What do the columns mean?</li><li>Where did the data come from?</li><li>What question am I trying to answer?</li></ol></div><div class="col-md-6"><ol start="5">
+<li>Are there missing values or duplicates?</li><li>Are values and formats consistent?</li><li>What patterns or differences do I see?</li><li>What evidence supports my conclusion?</li></ol></div></div>
+</div></div></div>
+</div>
+<div class="insight mt-4"><b>Notebook tip:</b> For each new tool or topic, write down the definition, purpose, 2–3 key commands or formulas, a small example, and one common mistake to avoid.</div>
+</div></section>
+
+
+<section id="student-projects"><div class="container py-5">
+<div class="section-label">STUDENT WORK</div>
+<h2>Student Data Analysis Projects</h2>
+<p class="lead">Explore projects created by students. Review their approach, analysis, charts and business insights to learn how a real project is presented.</p>
+<div class="row g-4 mt-2">
+<div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
+<h3 class="h5"><i class="fa-brands fa-github me-2"></i>Sales Data Analysis and Business Insights</h3>
+<p>Explore a sales analysis project and learn how data can be used to identify patterns and generate business insights.</p>
+<a class="btn btn-primary" href="https://github.com/chithraparthiv332/Sales-Data-Analysis-and-Business-Insights" target="_blank" rel="noopener noreferrer">View Project on GitHub <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+</div></div></div>
+<div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
+<h3 class="h5"><i class="fa-solid fa-chart-column me-2"></i>Data Analysis Project by Arya</h3>
+<p>Visit a student project webpage to see an example of presenting data analysis work and results.</p>
+<a class="btn btn-primary" href="https://aryakj2002-cpu.github.io/data_analysis_project_by_arya/" target="_blank" rel="noopener noreferrer">View Student Project <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+</div></div></div>
+</div></div></section>
+<section id="faq"><div class="container"><div class="section-label">07 / FAQ</div><h2>Frequently Asked Questions</h2><div class="accordion" id="faqs"><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">Do I need an IT background?</button></h2><div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqs"><div class="accordion-body">No. The concepts and tools can be learned step by step by beginners.</div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">Do I need to know Python first?</button></h2><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqs"><div class="accordion-body">No. Python basics are introduced as part of the learning path.</div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">Is advanced mathematics required?</button></h2><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqs"><div class="accordion-body">You can begin with basic arithmetic, logical thinking and curiosity. More concepts can be learned as needed.</div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f4">Will we practice with projects?</button></h2><div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqs"><div class="accordion-body">Yes. Practice datasets and projects help you apply the skills you learn.</div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f5">Does this course guarantee a job?</button></h2><div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqs"><div class="accordion-body">No course can guarantee a job. Skills, practice, projects, communication and job requirements all matter.</div></div></div></div></div></section>
+<section class="text-center"><div class="container"><h2>Start Your Data Analysis Journey</h2><p class="lead">Ask questions. Explore data. Find patterns. Make better decisions.</p><a href="#home" class="btn btn-blue btn-lg">Back to Top <i class="fa-solid fa-arrow-up ms-2"></i></a></div></section>
+</main><footer class="footer text-center"><div class="container"><b>DATAFLOW</b><p class="mb-1">Beginner-friendly Data Analysis learning</p><small>© 2026 DATAFLOW</small></div></footer><a href="#home" class="fab" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>
